@@ -1,0 +1,32 @@
+<templateSet group="Python">
+  <template name="pdb" value="import pdb; pdb.set_trace()" description="create pdb debugger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="p" value="print($END$)" description="print" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ps" value="print(&quot;$END$&quot;)" description="print string" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ipdb" value="import ipdb; ipdb.set_trace()" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="pf" value="print(f&quot;{$END$=}&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="bp" value="| &quot;$END$&quot; &gt;&gt; beam.Map(print)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
