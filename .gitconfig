@@ -1,0 +1,16 @@
+[alias]
+	ss    = "status"
+	cm    = "commit -m"
+	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+	cbr   = "branch --show-current"
+	del   = "branch -D"
+	ch    = "checkout"
+	cb    = "checkout -b"
+	cmp   = "!f() { git commit -m \"$@\" && git push; }; f"
+	lg    = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	done  = "push origin HEAD"
+[core]
+	excludesFile = ~/.gitignore
+[user]
+	name = arthur-yatsun
+	email = a_yatsun-itssv@kw.com
