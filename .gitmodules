@@ -1,0 +1,3 @@
+[submodule ".dotfiles_personal"]
+	path = .dotfiles_personal
+	url = git@github.com:arthur-yatsun/.dotfiles_personal.git
