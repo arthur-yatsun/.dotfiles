@@ -14,3 +14,5 @@
 [user]
 	name = arthur-yatsun
 	email = a_yatsun-itssv@kw.com
+[commit]
+	gpgsign = false
