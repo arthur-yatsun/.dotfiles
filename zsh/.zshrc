@@ -11,15 +11,11 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 export PATH=$PATH:/opt/firefox
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$HOME/.poetry/bin:$PATH
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# system settings
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
-export TERM=xterm-256color
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -113,11 +109,13 @@ source ~/.config/aliases.bash
 
 # Cursor color
 echo -ne "\e]12;purple\a"
+export TERM=xterm-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # poetry
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
