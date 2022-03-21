@@ -10,6 +10,7 @@ for dir in */; do
        continue 
     fi
 
-    stow -vt ~ $dir
+    stow -vDt ~ $dir
     echo
 done
+
