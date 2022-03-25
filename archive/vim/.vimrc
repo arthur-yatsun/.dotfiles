@@ -15,7 +15,6 @@ Plugin 'zeis/vim-kolor'
 
 Plugin 'preservim/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim' 
@@ -63,8 +62,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" set lead button to space
+let mapleader = " " 
 
-let mapleader = " " " map leader to Space
 " https://www.cs.swarthmore.edu/oldhelp/vim/modelines.html
 set modeline
 set modelines=3
@@ -96,7 +96,7 @@ set expandtab
 " color scheme
 syntax on 
 let python_highlight_all=1
-" colorscheme onedark
+colorscheme onedark
 filetype on
 
 " code folding
