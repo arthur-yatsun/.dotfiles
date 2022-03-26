@@ -97,6 +97,8 @@ source ~/.config/aliases.bash
 
 # change ctrl-p behaviour 
 bindkey "^P" up-line-or-search
+bindkey "^K" beginning-of-line
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
