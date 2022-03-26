@@ -95,6 +95,9 @@ source ~/.config/aliases.bash
 
 # User configuration
 
+# change ctrl-p behaviour 
+bindkey "^P" up-line-or-search
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
