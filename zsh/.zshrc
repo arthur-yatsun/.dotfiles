@@ -99,6 +99,10 @@ source ~/.config/aliases.bash
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 
+# map caps to control behaviour and control+win to change keyboard layout
+setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
+
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
