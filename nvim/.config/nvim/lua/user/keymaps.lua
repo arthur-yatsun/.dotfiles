@@ -70,10 +70,19 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- telescope --
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>d", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+
+keymap("n", "<leader>h", '<cmd>lua require("telescope.builtin").git_bcommits()<cr>', opts)
+keymap("n", "<leader>i", '<cmd>lua require("telescope.builtin").git_status()<cr>', opts)
+
+-- map("n", "<leader>cd", '<cmd>lua require("telescope.builtin").diagnostics()<cr>')
+
+keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
+keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
+keymap('v', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
 
 -- nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
