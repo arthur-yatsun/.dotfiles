@@ -15,13 +15,13 @@ require "user.bufferline"
 require "user.treesitter"
 require "user.alpha"
 require "user.indentline"
-require "user.minimap"
+-- require "user.minimap"
 
 -- editor features
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.impatient"
+-- require "user.impatient"
 
 
 -- other
@@ -31,6 +31,4 @@ require "user.telescope"
 require "user.py_env"
 
 
--- require "user.project"
--- require "user.whichkey"
--- require "user.autocommandse
+require "user.autocommands"

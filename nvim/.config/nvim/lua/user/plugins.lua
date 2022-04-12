@@ -89,6 +89,8 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use 'lewis6991/impatient.nvim'
   use 'goolord/alpha-nvim'
+  use "ahmedkhalf/project.nvim"
+
 
   -- copilot
   --
