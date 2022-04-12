@@ -20,10 +20,13 @@ require "user.telescope"
 require "user.gitsigns"
 require "user.nvim-tree"
 
+require "user.py_env"
+require "user.minimap"
+require "user.impatient"
+
 -- require "user.toggleterm"
--- require "user.impatient"
 -- require "user.project"
--- require "user.alpha"
+require "user.alpha"
 -- require "user.indentline"
 -- require "user.whichkey"
 -- require "user.autocommandse
