@@ -6,6 +6,7 @@ require "user.keymaps"
 -- auto completions
 require "user.cmp"
 require "user.lsp"
+require "user.copilot"
 
 -- appearance
 require "user.colorscheme"
@@ -21,8 +22,8 @@ require "user.gitsigns"
 require "user.nvim-tree"
 
 require "user.py_env"
-require "user.minimap"
 require "user.impatient"
+-- require "user.minimap"
 
 -- require "user.toggleterm"
 -- require "user.project"
