@@ -25,7 +25,7 @@ require "user.indentline"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.renamer"
+-- require "user.renamer"
 -- require "user.impatient"
 
 
