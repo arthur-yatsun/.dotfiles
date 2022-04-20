@@ -13,9 +13,9 @@ npairs.setup {
   },
   disable_filetype = { "TelescopePrompt", "spectre_panel" },
   fast_wrap = {
-    map = "<M-n>",
-    chars = { "{", "[", "(", '"', "'", "`" },
-    pattern = string.gsub([[ [%'%"%)%>%]%)%}%`%,] ]], "%s+", ""),
+    map = "<C-w>",
+    chars = { "{", "[", "(", '"', "'", "`", "<" },
+    pattern = string.gsub([[ [%'%"%)%>%]%}%`%,] ]], "%s+", ""),
     offset = 0, -- Offset from pattern match
     end_key = "$",
     keys = "qwertyuiopzxcvbnmasdfghjkl",
@@ -24,6 +24,41 @@ npairs.setup {
     highlight_grey = "LineNr",
   },
 }
+
+
+local status_ok, Rule = pcall(require, "nvim-autopairs.rule")
+if not status_ok then
+    return
+end
+
+-- (|) > space > ( | )
+-- ( | ) > ) > (  )|
+npairs.add_rules {
+  Rule(' ', ' ')
+    :with_pair(function (opts)
+      local pair = opts.line:sub(opts.col - 1, opts.col)
+      return vim.tbl_contains({ '()', '[]', '{}' }, pair)
+    end),
+  Rule('( ', ' )')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%)') ~= nil
+      end)
+      :use_key(')'),
+  Rule('{ ', ' }')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%}') ~= nil
+      end)
+      :use_key('}'),
+  Rule('[ ', ' ]')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%]') ~= nil
+      end)
+      :use_key(']')
+}
+
 
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local cmp_status_ok, cmp = pcall(require, "cmp")
