@@ -82,7 +82,9 @@ plugins=(
     zsh-autosuggestions 
     autoswitch_virtualenv 
     gcloud 
-    sudo
+    docker
+    docker-compose
+    colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
