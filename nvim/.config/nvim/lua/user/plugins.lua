@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+  -- use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- Colorschemes
   use "nvim-lualine/lualine.nvim"
@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
   use 'goolord/alpha-nvim'
   use "ahmedkhalf/project.nvim"
+  use "simrat39/symbols-outline.nvim"
 
 
   -- copilot

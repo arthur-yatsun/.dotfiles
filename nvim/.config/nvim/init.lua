@@ -19,11 +19,12 @@ require "user.treesitter"
 require "user.alpha"
 require "user.indentline"
 -- require "user.minimap"
+require "user.outline"
 
 
 -- editor features
 require "user.autopairs"
-require "user.comment"
+-- require "user.comment"
 require "user.gitsigns"
 -- require "user.renamer"
 -- require "user.impatient"
