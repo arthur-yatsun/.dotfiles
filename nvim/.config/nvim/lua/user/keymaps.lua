@@ -75,3 +75,12 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- reload config
 keymap("n", "<leader>z", "<cmd>lua require('nvim-reload').Reload()<cr>", opts)
+
+
+-- gitsigns
+keymap("n", "<leader>,", "<cmd>lua require('gitsigns').preview_hunk()<cr>", opts)
+keymap("n", ",<leader>", "<cmd>lua require('gitsigns').reset_hunk()<cr>", opts)
+keymap("n", "<leader>.", "<cmd>lua require('gitsigns').blame_line()<cr>", opts)
+
+keymap("n", ",", "<cmd>lua require('gitsigns').next_hunk()<cr>", opts)
+
