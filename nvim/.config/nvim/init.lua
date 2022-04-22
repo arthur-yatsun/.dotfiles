@@ -3,6 +3,7 @@ require "user.options"
 require "user.plugins"
 require "user.keymaps"
 require "user.autocommands"
+require "user.impatient"
 
 
 -- auto completions
@@ -18,15 +19,15 @@ require "user.bufferline"
 require "user.treesitter"
 require "user.alpha"
 require "user.indentline"
--- require "user.minimap"
--- require "user.outline"
+
+require "user.minimap"
+require "user.outline"
 
 
 -- editor features
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.impatient"
 
 
 -- other
