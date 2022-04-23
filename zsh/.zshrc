@@ -101,10 +101,20 @@ source ~/.config/aliases.bash
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 
+
+alias xsc="xclip -selection clipboard"
+alias ls="ls -la --color=auto"
+
+alias python="PYTHONPATH=./ python"
+alias pytest="PYTHONPATH=./ pytest"
+
+alias vi=nvim
+alias v="vi ./"
+alias vic="cd ~/.config/nvim/"
+
+
 # map caps to control behaviour and control+win to change keyboard layout
 setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
-
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
