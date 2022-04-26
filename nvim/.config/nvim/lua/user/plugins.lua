@@ -82,6 +82,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'romgrk/nvim-treesitter-context'
 
   use "lewis6991/gitsigns.nvim"
   use 'kyazdani42/nvim-tree.lua'

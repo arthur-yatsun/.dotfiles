@@ -17,6 +17,7 @@ require "user.colorscheme"
 require "user.lualine"
 require "user.bufferline"
 require "user.treesitter"
+require "user.context"
 require "user.alpha"
 require "user.indentline"
 
