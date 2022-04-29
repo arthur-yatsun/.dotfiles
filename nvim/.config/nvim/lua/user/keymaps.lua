@@ -42,7 +42,7 @@ keymap("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", opts)
 keymap("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", opts)
 keymap("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", opts)
 keymap("n", "<C-o>", "<Cmd>Bdelete!<cr>", opts)
-keymap("n", "<leader>;", "<Cmd>e#<cr>", opts)
+keymap("n", "j;", "<Cmd>e#<cr>", opts)
 
 -- move text up and down
 keymap("n", "<leader>j", "<Esc>:m .+1<CR>==", opts)
