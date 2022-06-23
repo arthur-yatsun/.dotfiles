@@ -14,8 +14,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
+# export LC_ALL=en_IN.UTF-8
+# export LANG=en_IN.UTF-8
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -100,10 +100,11 @@ source ~/.config/aliases.bash
 # change ctrl-p behaviour 
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
+bindkey "^<" backward-word
 
 
 alias xsc="xclip -selection clipboard"
-alias ls="ls -la --color=auto"
+alias ls="ls -l --color=auto"
 
 alias python="PYTHONPATH=./ python"
 alias pytest="PYTHONPATH=./ pytest"
@@ -114,7 +115,7 @@ alias vic="cd ~/.config/nvim/"
 
 
 # map caps to control behaviour and control+win to change keyboard layout
-setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
+# setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

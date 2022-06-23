@@ -92,7 +92,7 @@ return packer.startup(function(use)
   use 'goolord/alpha-nvim'
   use "ahmedkhalf/project.nvim"
   use "simrat39/symbols-outline.nvim"
-
+  use "tpope/vim-surround"
 
   -- copilot
   use "github/copilot.vim"
