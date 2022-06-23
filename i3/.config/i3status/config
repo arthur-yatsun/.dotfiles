@@ -8,54 +8,63 @@
 
 general {
     colors = true
-    interval = 2
-    # output_format = i3bar
+    interval = 1
+    output_format = i3bar
 }
 
 
 
-order += "ethernet _first_"
 order += "volume master"
 order += "battery all"
 order += "disk /"
-order += "load"
 order += "memory"
 order += "wireless _first_"
+order += "tztime language"
 
+
+tztime language {
+    format = "lang"
+}
 
 wireless _first_ {
-    format_up = "W: (%quality at %essid) %ip"
-    format_down = "W: down"
+    format_up = " 📡 %essid %quality "
+    format_down = "down"
 }
 
-ethernet _first_ {
-    format_up = "%ip (%speed)"
-    format_down = ""
-}
 
 battery all {
-    format = "%status %percentage %remaining"
+    format = " 🔋 %status %percentage %remaining "
 }
 
 volume master {
-    format = " %volume"
-    format_muted = " %volume"
+    format = "   %volume "
+    format_muted = "   %volume "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
 }
 
 disk "/" {
-    format = "%avail"
+    format = " 💻 %avail "
 }
 
-load {
-    format = "%1min"
-}
 
 memory {
-    format = "%used > %available"
+    format = " 💽 %used out of %available "
     threshold_degraded = "1G"
     format_degraded = "MEMORY < %available"
+}
+
+
+# not used
+
+load {
+    format = " 🤯 %1min "
+}
+
+
+ethernet _first_ {
+    format_up = "%ip (%speed)"
+    format_down = ""
 }
 
