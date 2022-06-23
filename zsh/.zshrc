@@ -11,6 +11,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 export PATH=$PATH:/opt/firefox
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/.config/i3/scripts
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -104,7 +105,7 @@ bindkey "^<" backward-word
 
 
 alias xsc="xclip -selection clipboard"
-alias ls="ls -l --color=auto"
+alias ls="ls --color=auto"
 
 alias python="PYTHONPATH=./ python"
 alias pytest="PYTHONPATH=./ pytest"
