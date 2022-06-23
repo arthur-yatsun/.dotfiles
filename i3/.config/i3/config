@@ -23,7 +23,7 @@ client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
 # set mod key (Mod1 - alt, Mod4 - win)
-set $mod Mod1
+set $mod Mod4
 
 
 # -- startup ----------------------------------------------------------------------------
