@@ -114,6 +114,8 @@ alias vi=nvim
 alias v="vi ./"
 alias vic="cd ~/.config/nvim/"
 
+alias tmux="tmux -2"
+
 
 # map caps to control behaviour and control+win to change keyboard layout
 # setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
