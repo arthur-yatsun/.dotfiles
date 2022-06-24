@@ -13,6 +13,6 @@
 	excludesFile = ~/.gitignore
 [user]
 	name = arthur-yatsun
-	email = a_yatsun-itssv@kw.com
+	email = arthuryatsun@arthuryatsun.com
 [commit]
 	gpgsign = false
