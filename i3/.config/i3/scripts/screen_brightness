@@ -1,0 +1,12 @@
+#!/bin/bash
+# Usage: screen_brightness <int ranging from 1 to 100>
+
+brightness=$1
+
+if (( $brightness > 100 )) || (( $brightness < 1 )); then
+    echo "Please enter value from 1 to 100"
+fi
+
+brightness=$(echo "scale=1; ${brightness} / 100" | bc)
+xrandr --output $(xrandr | grep " connected" | cut -f1 -d " ") --brightness $brightness
+
