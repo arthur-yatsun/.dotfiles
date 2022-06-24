@@ -52,7 +52,10 @@ keymap("n", "<leader>k", "<Esc>:m .-2<CR>==", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- i don't know why it's here, should be something usefull
+-- real copy and paste
+-- https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim
+keymap("n", "d", '"_d', opts)
+keymap("v", "d", '"_d', opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Move text up and down
