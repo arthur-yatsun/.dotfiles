@@ -65,27 +65,26 @@ colors:
      background: '#ffffff'
     focused_match:
      foreground: '#ffffff'
-     background: '#000000'
+     background: '#8601af'
     bar:
      background: '#c5c8c6'
      foreground: '#1d1f21'
 
   hints:
     start:
-     foreground: '#1d1f21'
-     background: '#e9ff5e'
-
+     foreground: '#ffffff' 
+     background: '#8601af'
     end:
-     foreground: '#e9ff5e'
-     background: '#1d1f21'
+     foreground: '#ffffff' 
+     background: '#8601af'
 
   line_indicator:
    foreground: None
    background: None
 
   selection:
-   text: CellBackground
-   background: CellForeground
+   text: '#ffffff' 
+   background: '#8601af'
 
 
 key_bindings:
