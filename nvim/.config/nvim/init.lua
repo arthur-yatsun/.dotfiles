@@ -9,7 +9,6 @@ require "user.impatient"
 -- auto completions
 require "user.cmp"
 require "user.lsp"
-require "user.copilot"
 
 
 -- appearance
