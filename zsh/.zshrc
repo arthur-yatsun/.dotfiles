@@ -7,7 +7,7 @@ fi
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 export PATH=$PATH:/opt/firefox
 export PATH=$PATH:/usr/local/go/bin
