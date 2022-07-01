@@ -1,5 +1,4 @@
 [submodule ".personal"]
 	path = .personal
 	url = git@github.com:arthur-yatsun/.personal.git
-[submodule "personal"]
 	ignore = untracked
