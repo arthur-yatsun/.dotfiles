@@ -91,10 +91,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # export env variables
-# source ~/.config/env_variables.bash
+source ~/.config/env_variables.bash
 
 # export aliases
-# source ~/.config/aliases.bash
+source ~/.config/aliases.bash
 
 # User configuration
 
