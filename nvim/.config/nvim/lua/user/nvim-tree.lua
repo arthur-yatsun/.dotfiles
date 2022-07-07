@@ -66,13 +66,6 @@ nvim_tree.setup {
     relativenumber = true,
   },
   renderer = {
-    icons = {
-      show = {
-        git = true,
-        file = true,
-        folder = true,
-      }
-    },
     root_folder_modifier = ":t",
     highlight_git = true,
     icons = {

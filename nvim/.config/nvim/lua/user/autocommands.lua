@@ -39,4 +39,10 @@ vim.cmd [[
   augroup _remove_trailing_whitespaces
     autocmd BufWritePre *.py,*.lua,*.java :%s/\s\+$//e
   augroup end
+
+  " augroup BackgroundSwitch
+  "   autocmd!
+  "   autocmd WinEnter * highlight Normal guifg=#ABB2BF guibg=none
+  "   autocmd WinLeave * highlight Normal guifg=#ffffff guibg=#ffffff
+  " augroup END
 ]]
