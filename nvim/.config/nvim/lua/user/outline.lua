@@ -1,7 +1,5 @@
 local status_ok, outline = pcall(require, "symbols_outline")
-if status_ok then
-    return
-end
+if status_ok then return end
 
 vim.g.symbols_outline = {
     highlight_hovered_item = true,
@@ -22,7 +20,7 @@ vim.g.symbols_outline = {
         hover_symbol = "<C-space>",
         toggle_preview = "K",
         rename_symbol = "r",
-        code_actions = "a",
+        code_actions = "a"
     },
     lsp_blacklist = {},
     symbol_blacklist = {},

@@ -12,6 +12,3 @@ vim.g.minimap_cursor_color = 'MinimapCurrentLine'
 
 vim.g.minimap_left = 1
 
-
-
-

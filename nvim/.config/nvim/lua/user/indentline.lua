@@ -1,17 +1,10 @@
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
-if not status_ok then
-	return
-end
+if not status_ok then return end
 
-vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
+vim.g.indent_blankline_buftype_exclude = {"terminal", "nofile"}
 vim.g.indent_blankline_filetype_exclude = {
-	"help",
-	"startify",
-	"dashboard",
-	"packer",
-	"neogitstatus",
-	"NvimTree",
-	"Trouble",
+    "help", "startify", "dashboard", "packer", "neogitstatus", "NvimTree",
+    "Trouble"
 }
 vim.g.indentLine_enabled = 1
 -- vim.g.indent_blankline_char = "│"
@@ -62,9 +55,9 @@ vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
 indent_blankline.setup({
-	-- show_end_of_line = true,
-	-- space_char_blankline = " ",
-	show_current_context = true,
+    -- show_end_of_line = true,
+    -- space_char_blankline = " ",
+    show_current_context = true
     -- char = "",
     -- space_char_highlight_list = {
     --     "IndentBlanklineIndent1",
@@ -74,10 +67,10 @@ indent_blankline.setup({
     --     "IndentBlanklineIndent1",
     --     "IndentBlanklineIndent2",
     -- },
-	-- show_current_context_start = true,
-	-- char_highlight_list = {
-	--   "IndentBlanklineIndent1",
-	--   "IndentBlanklineIndent2",
-	--   "IndentBlanklineIndent3",
-	-- },
+    -- show_current_context_start = true,
+    -- char_highlight_list = {
+    --   "IndentBlanklineIndent1",
+    --   "IndentBlanklineIndent2",
+    --   "IndentBlanklineIndent3",
+    -- },
 })
