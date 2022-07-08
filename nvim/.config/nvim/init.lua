@@ -39,3 +39,5 @@ require "user.telescope"
 -- connects automatically to the active python venv
 require "user.py_env"
 
+-- set colorcolumn
+vim.cmd "set colorcolumn=90"
