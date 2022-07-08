@@ -34,6 +34,19 @@ local spaces = function()
     return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local lsp_server = function()
+    local msg = 'no active lsp server'
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+    if next(clients) == nil then return msg end
+    for _, client in ipairs(clients) do
+        local filetypes = client.config.filetypes
+        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+            return "  " .. client.name
+        end
+    end
+end
+
 lualine.setup({
     options = {
         icons_enabled = true,
@@ -50,8 +63,8 @@ lualine.setup({
         lualine_b = {branch, diagnostics},
         lualine_c = {},
         -- lualine_x = { "encoding", "fileformat", "filetype" },
-        lualine_x = {diff, spaces, "encoding", filetype},
-        lualine_y = {location},
+        lualine_x = {diff, spaces, "encoding"},
+        lualine_y = {lsp_server, location},
         lualine_z = {progress}
     },
     inactive_sections = {
