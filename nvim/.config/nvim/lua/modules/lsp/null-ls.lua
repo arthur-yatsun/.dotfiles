@@ -13,7 +13,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = false,
     sources = {
-        null_ls.builtins.code_actions.gitsigns,
+        -- null_ls.builtins.code_actions.gitsigns,
         -- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
         -- formatting.black.with({ extra_args = { "--fast" } }),
         -- formatting.stylua,

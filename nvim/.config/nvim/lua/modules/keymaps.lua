@@ -78,11 +78,6 @@ keymap("n", "<leader>f",
 
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
-keymap("n", "<leader>h",
-       '<cmd>lua require("telescope.builtin").git_bcommits()<cr>', opts)
-keymap("n", "<leader>i",
-       '<cmd>lua require("telescope.builtin").git_status()<cr>', opts)
-
 -- nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
