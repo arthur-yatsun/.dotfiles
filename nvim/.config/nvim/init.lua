@@ -10,6 +10,7 @@ require "modules.cmp"
 require "modules.lsp"
 
 -- appearance
+require "modules.nvim-tree"
 require "modules.colorscheme"
 require "modules.lualine"
 require "modules.bufferline"
@@ -25,10 +26,8 @@ require "modules.outline"
 require "modules.autopairs"
 require "modules.comment"
 require "modules.gitsigns"
-
--- other
-require "modules.nvim-tree"
 require "modules.telescope"
+require "modules.marks"
 
 -- connects automatically to the active python venv
 require "modules.py_env"
