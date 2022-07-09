@@ -32,7 +32,7 @@ comment.setup {
         ---Line-comment keymap
         line = '<A-\\>',
         ---Block-comment keymap
-        block = '<g]>'
+        block = 'g]'
     },
 
     ---LHS of extra mappings
@@ -41,7 +41,7 @@ comment.setup {
         ---Add comment on the line above
         above = 'ga',
         ---Add comment on the line below
-        below = 'go',
+        below = 'gb',
         ---Add comment at the end of line
         eol = 'ge'
     },

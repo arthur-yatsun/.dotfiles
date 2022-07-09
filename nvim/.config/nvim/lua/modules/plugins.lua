@@ -148,4 +148,7 @@ return packer.startup(function(use)
         branch = 'master',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
+    -- https://github.com/chentoast/marks.nvim
+    use "chentoast/marks.nvim"
 end)

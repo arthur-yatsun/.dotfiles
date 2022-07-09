@@ -32,7 +32,7 @@ keymap("n", "<C-Left>", ":vertical resize +10<CR>", opts)
 -- navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<M-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "g1", "<Cmd>BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>", opts)
 keymap("n", "<M-3>", "<Cmd>BufferLineGoToBuffer 3<CR>", opts)
 keymap("n", "<M-4>", "<Cmd>BufferLineGoToBuffer 4<CR>", opts)
