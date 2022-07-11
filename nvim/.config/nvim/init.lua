@@ -34,4 +34,3 @@ require "modules.py_env"
 
 -- set colorcolumn
 vim.cmd "set colorcolumn=90"
-
