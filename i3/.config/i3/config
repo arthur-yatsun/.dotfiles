@@ -22,9 +22,10 @@ client.unfocused            $bg        $bg         $fg
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
+# default_border pixel 3
+
 # set mod key (Mod1 - alt, Mod4 - win)
 set $mod Mod4
-
 
 # -- startup ----------------------------------------------------------------------------
 
@@ -58,7 +59,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -210,4 +211,11 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command exec /home/$USER/.dotfiles/i3/.config/i3/scripts/keyboard_layout.sh
+    colors {
+        background          $bg
+        statusline          $fg
+        separator           $bg
+        focused_workspace   $bg        $bg        $bl
+        inactive_workspace  $bg        $bg        $ia
+    }
 }
