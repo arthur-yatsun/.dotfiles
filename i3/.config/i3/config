@@ -16,13 +16,12 @@ set $ac     #a0afa0
 set $rd     #e89393
 set $tx     #040404
 
-# set ciolors for windows   border     background  text
-client.focused              $bg        $bg         $bl
-client.unfocused            $bg        $bg         $fg
+
+# set ciolors for windows   border     background  text 
+client.focused              #161821    #161841     #d2d4de  #161821  #161821
+client.unfocused            #161821    #161821     #d2d4de 
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
-
-# default_border pixel 3
 
 # set mod key (Mod1 - alt, Mod4 - win)
 set $mod Mod4
