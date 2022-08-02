@@ -80,7 +80,7 @@ export UPDATE_ZSH_DAYS=10
 plugins=(
     git 
     zsh-syntax-highlighting 
-    zsh-autosuggestions 
+    zsh-autosuggestions
     autoswitch_virtualenv 
     gcloud 
     docker
