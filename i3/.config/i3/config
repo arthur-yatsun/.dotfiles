@@ -42,8 +42,10 @@ exec --no-startup-id /usr/bin/clipit &
 # set custom keybindings with setxkbmap
 # left control + left win to change keyboard layout to us or ru
 # set caps lock as control
-exec --no-startup-id /usr/bin/setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
+exec --no-startup-id /usr/bin/setxkbmap -option "grp:alt_shift_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
 
+# set background image
+exec --no-startup-id nitrogen --restore
 
 # -- key bindings -----------------------------------------------------------------------
 
@@ -69,6 +71,9 @@ bindsym $mod+d exec dmenu_run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+
+bindsym $mod+Tab  workspace back_and_forth
 
 # change focus
 bindsym $mod+h focus left
