@@ -13,3 +13,6 @@ XDG_PICTURES_DIR="$HOME/documents/pictures"
 XDG_VIDEOS_DIR="$HOME/"
 XDG_TEMPLATES_DIR="$HOME/Templates"
 XDG_PUBLICSHARE_DIR="$HOME/Public"
+
+XDG_BLOG_DIR="$HOME/documents/repos/blog.arthuryatsun"
+XDG_REPOS_DIR="$HOME/documents/repos"
