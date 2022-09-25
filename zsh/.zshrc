@@ -77,12 +77,28 @@ export UPDATE_ZSH_DAYS=10
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/	
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+
+alias python="PYTHONPATH=./ python3"
+alias pytest="PYTHONPATH=./ pytest"
+
+alias xsc="xclip -selection clipboard"
+alias ls="ls --color=auto"
+
+alias vi=nvim
+alias v="vi ./"
+alias vic="cd ~/.config/nvim/"
+
+alias tmux="tmux -2"
+
+alias reload="source ~/.zshrc"
+
 plugins=(
     git 
     zsh-syntax-highlighting 
     zsh-autosuggestions
     autoswitch_virtualenv 
-    gcloud 
+    gcloud
     docker
     docker-compose
     colored-man-pages
@@ -102,19 +118,6 @@ source ~/.config/aliases.bash
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 bindkey "^<" backward-word
-
-
-alias xsc="xclip -selection clipboard"
-alias ls="ls --color=auto"
-
-alias python="PYTHONPATH=./ python"
-alias pytest="PYTHONPATH=./ pytest"
-
-alias vi=nvim
-alias v="vi ./"
-alias vic="cd ~/.config/nvim/"
-
-alias tmux="tmux -2"
 
 
 # map caps to control behaviour and control+win to change keyboard layout
