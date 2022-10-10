@@ -1,19 +1,26 @@
 [alias]
+	# -- general
 	ss    = "status -s"
-	
+
+
+	# -- commits
 	cm    = "commit -m"
 	cam   = "commit -a -m"
-	undo  = "commit --amend"
 	cmp   = "!f() { git commit -m \"$@\" && git push; }; f"
+	# undo the last local commit
+	cu  = "commit --amend"
 
-	ch    = "checkout"
-	cb    = "checkout -b"
 
+	# -- branches
+	ch    = "switch"
+	cb    = "switch -c"
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 	cbr   = "branch --show-current"
 	del   = "branch -D"
 	
-	lg    = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+	# -- logging
+	lg    = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat"
 [core]
 	excludesFile = ~/.gitignore
 [user]
