@@ -2,7 +2,6 @@
 	# -- general
 	ss    = "status -s"
 
-
 	# -- commits
 	cm    = "commit -m"
 	cmp   = "!f() { git commit -m \"$@\" && git push; }; f"
@@ -12,13 +11,13 @@
 	cb    = "switch -c"
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 	cbr   = "branch --show-current"
-	pulr  = "pull --rebase"
+	pro   = "pull --rebase origin"
 	
-
 	# -- logging
 	lg    = "log --graph --decorate --pretty=oneline --abbrev-commit"
 [core]
 	excludesFile = ~/.gitignore
+	pager = cat
 [user]
 	name = arthur-yatsun
 	email = arthur54342@gmail.com
