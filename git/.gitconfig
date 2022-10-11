@@ -1,27 +1,46 @@
 [alias]
-	# -- general
+	# status
 	ss    = "status -s"
 
-	# -- commits
+	# commit with message
 	cm    = "commit -m"
-	cmp   = "!f() { git commit -m \"$@\" && git push; }; f"
 
-	# -- branches
+	# checkout\switch branch
 	ch    = "switch"
+
+	# create new branch and checkout (checkout -b\switch -c)
 	cb    = "switch -c"
+	
+	# show all branches
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+
+	# get current branch name
 	cbr   = "branch --show-current"
+	
+	# pull with rebase
 	pro   = "pull --rebase origin"
 	
-	# -- logging
+	# show log
 	lg    = "log --graph --decorate --pretty=oneline --abbrev-commit"
+	
+	# show last 5 logs (short log)
+	slg   = "log --graph --decorate --pretty=oneline --abbrev-commit -5"
+
+
 [core]
+	# use less pager if git output is more than a screen size (> ~500 lines)
+	pager = less -F
+
+	# set global gitignore file
 	excludesFile = ~/.gitignore
-	pager = cat
+
+
+# set default branch to main during `git init`
+[init]
+	defaultBranch = main
+
+
+# user based-configurations
 [user]
 	name = arthur-yatsun
 	email = arthur54342@gmail.com
-[commit]
-	gpgsign = false
-[init]
-	defaultBranch = main
