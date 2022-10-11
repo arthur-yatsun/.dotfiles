@@ -5,22 +5,18 @@
 
 	# -- commits
 	cm    = "commit -m"
-	cam   = "commit -a -m"
 	cmp   = "!f() { git commit -m \"$@\" && git push; }; f"
-	# undo the last local commit
-	cu  = "commit --amend"
-
 
 	# -- branches
 	ch    = "switch"
 	cb    = "switch -c"
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 	cbr   = "branch --show-current"
-	del   = "branch -D"
+	pulr  = "pull --rebase"
 	
 
 	# -- logging
-	lg    = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat"
+	lg    = "log --graph --decorate --pretty=oneline --abbrev-commit"
 [core]
 	excludesFile = ~/.gitignore
 [user]
