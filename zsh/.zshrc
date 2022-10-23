@@ -99,6 +99,7 @@ plugins=(
     zsh-autosuggestions
     autoswitch_virtualenv 
     gcloud
+    aws
     docker
     docker-compose
     colored-man-pages
@@ -114,7 +115,7 @@ source ~/.config/aliases.bash
 
 # User configuration
 
-# change ctrl-p behaviour 
+# change ctrl-p behaviour
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 bindkey "^<" backward-word
@@ -146,6 +147,9 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# add support for hidden files
+export FZF_DEFAULT_COMMAND='find .'
 
 # fix slow pastes
 pasteinit() {
