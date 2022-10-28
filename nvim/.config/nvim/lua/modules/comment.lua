@@ -21,7 +21,7 @@ comment.setup {
     ---@type table
     toggler = {
         -- -Line-comment toggle keymap
-        line = '<A-/>',
+        line = '<leader>/',
         -- -Block-comment toggle keymap
         block = 'g['
     },
@@ -30,7 +30,7 @@ comment.setup {
     ---@type table
     opleader = {
         ---Line-comment keymap
-        line = '<A-\\>',
+        line = '<leader>\\',
         ---Block-comment keymap
         block = 'g]'
     },
