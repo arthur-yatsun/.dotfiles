@@ -12,6 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:/opt/firefox
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.config/i3/scripts
+export PATH=/opt/homebrew/bin:$PATH
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
