@@ -19,7 +19,7 @@ require "modules.context"
 require "modules.alpha"
 require "modules.indentline"
 
-require "modules.minimap"
+--[[ require "modulesminimap" ]]
 require "modules.outline"
 
 -- editor features

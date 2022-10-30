@@ -151,4 +151,9 @@ return packer.startup(function(use)
 
     -- https://github.com/chentoast/marks.nvim
     use "chentoast/marks.nvim"
+
+    use 'ThePrimeagen/vim-be-good'
+
+    use 'preservim/tagbar'
+
 end)
