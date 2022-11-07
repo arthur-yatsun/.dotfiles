@@ -63,18 +63,10 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- telescope --
-keymap("n", "<leader>a",
-       "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ winblend = 10 }))<cr>",
-       opts)
-keymap("n", "<leader>s",
-       "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ winblend = 10 }))<cr>",
-       opts)
-keymap("n", "<leader>d",
-       "<cmd>lua require'telescope.builtin'.lsp_references(require('telescope.themes').get_dropdown())<cr>",
-       opts)
-keymap("n", "<leader>f",
-       "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<cr>",
-       opts)
+keymap("n", "<leader>a", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
+keymap("n", "<leader>s", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find()<cr>", opts)
+keymap("n", "<leader>d", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
 
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
