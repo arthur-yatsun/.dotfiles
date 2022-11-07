@@ -128,7 +128,7 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
 
     -- https://github.com/simrat39/symbols-outline.nvim
-    use "simrat39/symbols-outline.nvim"
+    --[[ use "simrat39/symbols-outline.nvim" ]]
 
     -- https://github.com/tpope/vim-surround
     use "tpope/vim-surround"

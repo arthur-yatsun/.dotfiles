@@ -34,8 +34,8 @@ nvim_tree.setup {
         icons = {hint = "", info = "", warning = "", error = ""}
     },
     update_focused_file = {
-        enable = true,
-        update_cwd = true,
+        enable = false,
+        update_cwd = false,
         ignore_list = {}
     },
     git = {
