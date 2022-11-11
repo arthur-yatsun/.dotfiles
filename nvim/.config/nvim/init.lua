@@ -20,7 +20,7 @@ require "modules.alpha"
 require "modules.indentline"
 
 --[[ require "modulesminimap" ]]
-require "modules.outline"
+require "modules.symbols_outline"
 
 -- editor features
 require "modules.autopairs"

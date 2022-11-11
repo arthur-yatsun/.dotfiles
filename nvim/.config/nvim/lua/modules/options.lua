@@ -33,7 +33,7 @@ local options = {
     scrolloff = 8, -- gives some space during scrolling up and down in the middle of the file
     sidescrolloff = 8, -- the same as scrolloff but for horizontall scroll
     foldenable = false,
-    foldmethod = "indent",
+    foldmethod = "manual",
     linebreak = true, -- Stop words being broken on wrap
     autoread = true -- Deal with file loads after updating via git etc
 }
