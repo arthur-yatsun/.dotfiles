@@ -2,7 +2,6 @@
 
 set -e -o pipefail
 
-
 install_dotfiles () {
     for dir in */; do
         # skip archive folder
@@ -15,12 +14,10 @@ install_dotfiles () {
     done
 }
 
-
 install_personal_dotfiles () {
     cd ./.personal/
     install_dotfiles
 }
-
 
 OPTION=$1
 case $OPTION in
