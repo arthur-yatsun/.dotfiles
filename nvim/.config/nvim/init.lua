@@ -19,7 +19,6 @@ require "modules.context"
 require "modules.alpha"
 require "modules.indentline"
 
---[[ require "modulesminimap" ]]
 require "modules.symbols_outline"
 
 -- editor features
