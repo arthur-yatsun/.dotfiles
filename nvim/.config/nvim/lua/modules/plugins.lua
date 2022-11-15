@@ -13,8 +13,6 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-
-
     -- System
     -- Have packer manager itself
     -- https://github.com/wbthomason/packer.nvim
@@ -24,7 +22,7 @@ return packer.startup(function(use)
     -- https://github.com/nvim-lua/popup.nvim
     use "nvim-lua/popup.nvim"
 
-    -- Useful lua functions used ny lots of plugins
+    -- Useful lua functions used by lots of plugins
     -- https://github.com/nvim-lua/plenary.nvim
     use "nvim-lua/plenary.nvim"
 
@@ -113,10 +111,16 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
 
     -- https://github.com/wfxr/minimap.vim
-    use 'wfxr/minimap.vim'
+    --[[ use 'wfxr/minimap.vim' ]]
 
     -- https://github.com/ahmedkhalf/project.nvim
-    use "ahmedkhalf/project.nvim"
+    --[[ use "ahmedkhalf/project.nvim" ]]
+
+    -- https://github.com/preservim/tagbar
+    use 'preservim/tagbar'
+
+    -- https://github.com/simrat39/symbols-outline.nvim
+    use "simrat39/symbols-outline.nvim"
 
 
     -- Editor features
@@ -127,8 +131,6 @@ return packer.startup(function(use)
     -- https://github.com/lewis6991/gitsigns.nvim
     use "lewis6991/gitsigns.nvim"
 
-    -- https://github.com/simrat39/symbols-outline.nvim
-    use "simrat39/symbols-outline.nvim"
 
     -- https://github.com/tpope/vim-surround
     use "tpope/vim-surround"
@@ -154,6 +156,5 @@ return packer.startup(function(use)
 
     use 'ThePrimeagen/vim-be-good'
 
-    use 'preservim/tagbar'
 
 end)

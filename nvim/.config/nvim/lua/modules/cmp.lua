@@ -101,8 +101,7 @@ cmp.setup {
     },
     sources = {
         { name = "nvim_lsp" }, { name = "luasnip" }, { name = "buffer" },
-        { name = "path" }, { name = "nvim_lua" },
-        { name = "spell"}
+        { name = "path" }, { name = "nvim_lua" }
     },
     confirm_opts = { behavior = cmp.ConfirmBehavior.Replace, select = false },
     window = { documentation = cmp.config.window.bordered() },
@@ -126,6 +125,3 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
-
-vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
