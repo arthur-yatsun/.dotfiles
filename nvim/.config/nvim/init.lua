@@ -19,17 +19,19 @@ require "modules.context"
 require "modules.alpha"
 require "modules.indentline"
 
-require "modules.symbols_outline"
 
 -- editor features
 require "modules.autopairs"
 require "modules.comment"
 require "modules.gitsigns"
-require "modules.telescope"
 require "modules.marks"
+require "modules.symbols_outline"
+require "modules.telescope"
+require "modules.harpoon"
+
 
 -- connects automatically to the active python venv
 require "modules.py_env"
 
--- set colorcolumn
+-- workaround to set colorcolumn
 vim.cmd "set colorcolumn=90"

@@ -122,6 +122,9 @@ return packer.startup(function(use)
     -- https://github.com/simrat39/symbols-outline.nvim
     use "simrat39/symbols-outline.nvim"
 
+    -- https://github.com/ThePrimeagen/harpoon
+    use "ThePrimeagen/harpoon"
+
 
     -- Editor features
     -- python venv auto activation
@@ -130,7 +133,6 @@ return packer.startup(function(use)
 
     -- https://github.com/lewis6991/gitsigns.nvim
     use "lewis6991/gitsigns.nvim"
-
 
     -- https://github.com/tpope/vim-surround
     use "tpope/vim-surround"
@@ -154,6 +156,8 @@ return packer.startup(function(use)
     -- https://github.com/chentoast/marks.nvim
     use "chentoast/marks.nvim"
 
+
+    -- Fun
     use 'ThePrimeagen/vim-be-good'
 
 
