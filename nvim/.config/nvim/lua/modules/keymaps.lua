@@ -44,6 +44,13 @@ keymap("n", "g9", "<Cmd>BufferLineGoToBuffer 9<CR>", opts)
 keymap("n", "<C-o>", "<Cmd>Bdelete!<cr>", opts)
 keymap("n", "j;", "<Cmd>e#<cr>", opts)
 
+
+-- harpoon --
+keymap("n", "<leader>h", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader>y", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+keymap("n", "gn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
+keymap("n", "gp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
+
 -- move text up and down
 keymap("n", "<leader>j", "<Esc>:m .+1<CR>==", opts)
 keymap("n", "<leader>k", "<Esc>:m .-2<CR>==", opts)
@@ -67,8 +74,9 @@ keymap("n", "<leader>a", "<cmd>lua require'telescope.builtin'.find_files()<cr>",
 keymap("n", "<leader>s", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find()<cr>", opts)
 keymap("n", "<leader>d", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
-
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+
 
 -- nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -79,9 +87,4 @@ keymap("n", "<leader>z", "<cmd>lua require('nvim-reload').Restart()<cr>", opts)
 -- gitsigns
 keymap("n", "<leader>,", "<cmd>lua require('gitsigns').preview_hunk()<cr>", opts)
 keymap("n", ",<leader>", "<cmd>lua require('gitsigns').reset_hunk()<cr>", opts)
-
 keymap("n", ",", "<cmd>lua require('gitsigns').next_hunk()<cr>", opts)
-keymap("n", "<", "<cmd>lua require('gitsigns').prev_hunk()<cr>", opts)
-
--- minimap
-keymap("n", "<leader>m", ":MinimapToggle<cr>", opts)

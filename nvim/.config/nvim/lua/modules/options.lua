@@ -35,7 +35,7 @@ local options = {
     foldenable = false,
     foldmethod = "manual",
     linebreak = true, -- Stop words being broken on wrap
-    autoread = true -- Deal with file loads after updating via git etc
+    autoread = true, -- Deal with file loads after updating via git etc
 }
 
 for k, v in pairs(options) do vim.opt[k] = v end
