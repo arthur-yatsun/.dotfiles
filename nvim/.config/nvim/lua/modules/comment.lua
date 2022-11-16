@@ -23,16 +23,16 @@ comment.setup {
         -- -Line-comment toggle keymap
         line = '<leader>/',
         -- -Block-comment toggle keymap
-        block = 'g['
+        block = '<leader>\\'
     },
 
     ---LHS of operator-pending mappings in NORMAL + VISUAL mode
     ---@type table
     opleader = {
         ---Line-comment keymap
-        line = '<leader>\\',
+        line = '<leader>/',
         ---Block-comment keymap
-        block = 'g]'
+        block = '<leader>\\'
     },
 
     ---LHS of extra mappings
