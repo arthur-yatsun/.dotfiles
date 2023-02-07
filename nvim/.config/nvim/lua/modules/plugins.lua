@@ -131,6 +131,9 @@ return packer.startup(function(use)
     -- https://github.com/HallerPatrick/py_lsp.nvim
     use "HallerPatrick/py_lsp.nvim"
 
+    -- https://github.com/michaeljsmith/vim-indent-object
+    use 'michaeljsmith/vim-indent-object'
+
     -- https://github.com/lewis6991/gitsigns.nvim
     use "lewis6991/gitsigns.nvim"
 

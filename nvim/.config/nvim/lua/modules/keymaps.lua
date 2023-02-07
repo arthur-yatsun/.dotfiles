@@ -46,8 +46,8 @@ keymap("n", "j;", "<Cmd>e#<cr>", opts)
 
 
 -- harpoon --
-keymap("n", "<leader>h", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
-keymap("n", "<leader>y", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>y", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader>h", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 keymap("n", "gn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
 keymap("n", "gp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
 

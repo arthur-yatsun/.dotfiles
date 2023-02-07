@@ -19,7 +19,6 @@ require "modules.context"
 require "modules.alpha"
 require "modules.indentline"
 
-
 -- editor features
 require "modules.autopairs"
 require "modules.comment"
@@ -28,7 +27,6 @@ require "modules.marks"
 require "modules.symbols_outline"
 require "modules.telescope"
 require "modules.harpoon"
-
 
 -- connects automatically to the active python venv
 require "modules.py_env"
