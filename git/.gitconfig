@@ -6,10 +6,10 @@
 	cm    = "commit -m"
 
 	# checkout\switch branch
-	ch    = "switch"
+	ch    = "checkout"
 
 	# create new branch and checkout (checkout -b\switch -c)
-	cb    = "switch -c"
+	cb    = "checkout -b"
 	
 	# show all branches
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
