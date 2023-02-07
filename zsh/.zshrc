@@ -5,15 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# export env variables
+source ~/.config/env_variables.bash
+# export aliases
+source ~/.config/aliases.bash
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-export PATH=$PATH:/opt/firefox
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/.config/i3/scripts
-export PATH=/opt/homebrew/bin:$PATH
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # export LC_ALL=en_IN.UTF-8
@@ -80,19 +78,6 @@ export UPDATE_ZSH_DAYS=10
 # Add wisely, as too many plugins slow down shell startup.
 
 
-alias python="PYTHONPATH=./ python3"
-alias pytest="PYTHONPATH=./ pytest"
-
-alias xsc="xclip -selection clipboard"
-alias ls="ls --color=auto"
-
-alias vi=nvim
-alias v="vi ./"
-alias vic="cd ~/.config/nvim/"
-
-alias tmux="tmux -2"
-
-alias reload="source ~/.zshrc"
 
 plugins=(
     git 
@@ -108,19 +93,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# export env variables
-source ~/.config/env_variables.bash
-
-# export aliases
-source ~/.config/aliases.bash
-
 # User configuration
-
 # change ctrl-p behaviour
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 bindkey "^<" backward-word
-
 
 # map caps to control behaviour and control+win to change keyboard layout
 # setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"
@@ -169,3 +146,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# terraform autocompletion
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
