@@ -97,7 +97,14 @@ source $ZSH/oh-my-zsh.sh
 # change ctrl-p behaviour
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
-bindkey "^<" backward-word
+
+# bindkey "^<" backward-word
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# enable glob operator
+setopt extendedglob
 
 # map caps to control behaviour and control+win to change keyboard layout
 # setxkbmap -option "grp:lctrl_lwin_toggle" -layout us,ru -variant qwerty -option "ctrl:nocaps"

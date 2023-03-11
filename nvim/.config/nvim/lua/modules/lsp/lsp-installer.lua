@@ -10,6 +10,10 @@ lsp_installer.on_server_ready(function(server)
         on_attach = require("modules.lsp.handlers").on_attach,
         capabilities = require("modules.lsp.handlers").capabilities,
     }
+    if server.name == "pyright" then
+        local pyright_opts = require("modules.lsp.settings.pyright")
+        opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+    end
 
     if server.name == "jsonls" then
         local jsonls_opts = require("modules.lsp.settings.jsonls")

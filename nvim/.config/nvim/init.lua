@@ -32,4 +32,6 @@ require "modules.harpoon"
 require "modules.py_env"
 
 -- workaround to set colorcolumn
-vim.cmd "set colorcolumn=90"
+vim.cmd "set colorcolumn=120"
+
+require("lspconfig").pyright.setup{}

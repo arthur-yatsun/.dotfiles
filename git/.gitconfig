@@ -1,31 +1,15 @@
 [alias]
-	# status
 	ss    = "status -s"
-
-	# commit with message
 	cm    = "commit -m"
-
-	# checkout\switch branch
 	ch    = "checkout"
-
-	# create new branch and checkout (checkout -b\switch -c)
 	cb    = "checkout -b"
-	
-	# show all branches
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
-
-	# get current branch name
 	cbr   = "branch --show-current"
-	
-	# pull with rebase
-	pro   = "pull --rebase origin"
-	
-	# show log
 	lg    = "log --graph --decorate --pretty=oneline --abbrev-commit"
-	
-	# show last 5 logs (short log)
 	slg   = "log --graph --decorate --pretty=oneline --abbrev-commit -5"
 
+    sts   = "stash save"
+    sta   = "stash apply" # stash^{/my_stash_name} or stash@{n}
 
 [core]
 	# use less pager if git output is more than a screen size (> ~500 lines)
