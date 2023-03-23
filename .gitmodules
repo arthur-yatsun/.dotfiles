@@ -6,6 +6,3 @@
 [submodule "_scripts_templates"]
 	path = _scripts_templates
 	url = git@github.com:arthur-yatsun/.scripts_templates.git
-[submodule "_script_templates"]
-	path = _script_templates
-	url = git@github.com:arthur-yatsun/.scripts_templates.git
