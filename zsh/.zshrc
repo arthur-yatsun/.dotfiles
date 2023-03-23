@@ -122,7 +122,7 @@ setopt extendedglob
 # export ARCHFLAGS="-arch x86_64"
 
 # Cursor color
-echo -ne "\e]12;purple\a"
+# echo -ne "\e]12;purple\a"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
