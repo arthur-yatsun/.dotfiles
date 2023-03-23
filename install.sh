@@ -1,16 +1,15 @@
 #!/bin/zsh
 
-set -e -o pipefail
-
 install_dotfiles () {
     for dir in */; do
-        # skip archive folder
-        if [ "$dir" = "archive/" ]; then 
+        # skip dir names started with "_"
+        if [[ "$dir" = _* ]]; then 
+           echo "skipping ${dir}"
            continue 
         fi
-
+        
+        echo "Installing ${dir}"
         stow -vt ~ $dir
-        echo
     done
 }
 
