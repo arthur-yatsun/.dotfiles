@@ -3,6 +3,6 @@
 	url = git@github.com:arthur-yatsun/.personal.git
 	ignore = untracked
 
-[submodule "_scripts_templates"]
-	path = _scripts_templates
-	url = git@github.com:arthur-yatsun/.scripts_templates.git
+[submodule ".scripts_references"]
+	path = .scripts_references
+	url = git@github.com:arthur-yatsun/.scripts_references.git
