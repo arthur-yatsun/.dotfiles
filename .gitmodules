@@ -2,10 +2,12 @@
 	path = .personal
 	url = git@github.com:arthur-yatsun/.personal.git
 	ignore = untracked
-
 [submodule ".scripts_references"]
 	path = .scripts_references
 	url = git@github.com:arthur-yatsun/.scripts_references.git
 [submodule ".ansible"]
 	path = .ansible
 	url = git@github.com:arthur-yatsun/.ansible.git
+[submodule ".debian-setup"]
+	path = .debian-setup
+	url = git@github.com:arthur-yatsun/debian-setup.git
