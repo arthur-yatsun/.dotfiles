@@ -3,8 +3,8 @@
 
 remove_dotfiles () {
     for dir in */; do
-        # skip dir names started with "_"
-        if [[ "$dir" = _* ]]; then 
+        # skip dir names started with "."
+        if [[ "$dir" = .* ]]; then 
            echo "skipping ${dir}"
            continue 
         fi
