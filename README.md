@@ -1,5 +1,8 @@
 # .dotfiles
 
+
+## Installation
+
 ```
 chmod +x install.sh remove.sh
 ```
