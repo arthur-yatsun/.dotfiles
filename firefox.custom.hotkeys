@@ -1,0 +1,10 @@
+[
+  {
+    "key": "command+;",
+    "action": "clonetab",
+    "sites": "",
+    "sitesArray": [
+      ""
+    ]
+  }
+]
