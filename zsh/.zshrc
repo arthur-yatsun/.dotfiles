@@ -23,7 +23,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -46,9 +46,6 @@ export UPDATE_ZSH_DAYS=10
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -98,11 +95,6 @@ source $ZSH/oh-my-zsh.sh
 bindkey "^P" up-line-or-search
 bindkey "^K" beginning-of-line
 
-# bindkey "^<" backward-word
-
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-
 # enable glob operator
 setopt extendedglob
 
@@ -117,9 +109,6 @@ setopt extendedglob
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Cursor color
 # echo -ne "\e]12;purple\a"
@@ -148,7 +137,7 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-
+# pyenv config
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -157,3 +146,6 @@ eval "$(pyenv virtualenv-init -)"
 # terraform autocompletion
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# To customize prompt, run `p10k configure` or edit ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh.
+[[ ! -f ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh ]] || source ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh
