@@ -10,7 +10,7 @@ lsp_installer.on_server_ready(function(server)
         on_attach = require("modules.lsp.handlers").on_attach,
         capabilities = require("modules.lsp.handlers").capabilities,
     }
-    if server.name == "pyright" then
+    --[[ if server.name == "pyright" then
         local pyright_opts = require("modules.lsp.settings.pyright")
         opts = vim.tbl_deep_extend("force", pyright_opts, opts)
     end
@@ -23,7 +23,7 @@ lsp_installer.on_server_ready(function(server)
     if server.name == "sumneko_lua" then
         local sumneko_opts = require("modules.lsp.settings.sumneko_lua")
         opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-    end
+    end ]]
 
     -- This setup() function is exactly the same as lspconfig's setup function.
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

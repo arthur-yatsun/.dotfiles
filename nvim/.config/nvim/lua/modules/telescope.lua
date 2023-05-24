@@ -6,9 +6,17 @@ local actions = require "telescope.actions"
 telescope.setup {
     defaults = {
 
+        layout_config = {
+            vertical = { width = 0.5 }
+        },
+        pickers = {
+            find_files = {
+                theme = "dropdown",
+            }
+        },
         prompt_prefix = " ",
         selection_caret = " ",
-        path_display = {""},
+        path_display = { "" },
 
         mappings = {
             i = {
@@ -35,12 +43,12 @@ telescope.setup {
                 ["<PageDown>"] = actions.results_scrolling_down,
 
                 ["<Tab>"] = actions.toggle_selection +
-                    actions.move_selection_worse,
+                actions.move_selection_worse,
                 ["<S-Tab>"] = actions.toggle_selection +
-                    actions.move_selection_better,
+                actions.move_selection_better,
                 ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
                 ["<M-q>"] = actions.send_selected_to_qflist +
-                    actions.open_qflist,
+                actions.open_qflist,
                 ["<C-l>"] = actions.complete_tag,
                 ["<C-_>"] = actions.which_key -- keys from pressing <C-/>
             },
@@ -53,12 +61,12 @@ telescope.setup {
                 ["<C-t>"] = actions.select_tab,
 
                 ["<Tab>"] = actions.toggle_selection +
-                    actions.move_selection_worse,
+                actions.move_selection_worse,
                 ["<S-Tab>"] = actions.toggle_selection +
-                    actions.move_selection_better,
+                actions.move_selection_better,
                 ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
                 ["<M-q>"] = actions.send_selected_to_qflist +
-                    actions.open_qflist,
+                actions.open_qflist,
 
                 ["j"] = actions.move_selection_next,
                 ["k"] = actions.move_selection_previous,

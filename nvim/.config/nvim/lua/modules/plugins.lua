@@ -31,6 +31,9 @@ return packer.startup(function(use)
 
 
     -- Appearence
+    -- https://github.com/shaunsingh/nord.nvim/
+    use 'shaunsingh/nord.nvim'
+
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
@@ -158,7 +161,6 @@ return packer.startup(function(use)
 
     -- https://github.com/chentoast/marks.nvim
     use "chentoast/marks.nvim"
-
 
     -- Fun
     use 'ThePrimeagen/vim-be-good'

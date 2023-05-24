@@ -50,7 +50,7 @@ end
 lualine.setup({
     options = {
         icons_enabled = true,
-        theme = "nightfox",
+        theme = "nord",
         component_separators = {left = '', right = ''},
         section_separators = {left = '', right = ''},
         -- component_separators = { left = "", right = "" },
@@ -64,7 +64,8 @@ lualine.setup({
         lualine_c = {},
         -- lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_x = {diff, spaces, "encoding"},
-        lualine_y = {lsp_server, location},
+        --[[ lualine_y = {lsp_server, location}, ]]
+        lualine_y = {location},
         lualine_z = {progress}
     },
     inactive_sections = {

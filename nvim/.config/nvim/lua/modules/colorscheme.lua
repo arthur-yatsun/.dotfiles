@@ -1,11 +1,12 @@
-require('nightfox').setup({
-    options = {
-        -- Compiled file's destination location
-        transparent = true -- Disable setting background
-    }
-})
+--[[ require('nightfox').setup({ ]]
+--[[     options = { ]]
+--[[         -- Compiled file's destination location ]]
+--[[         transparent = true -- Disable setting background ]]
+--[[     } ]]
+--[[ }) ]]
 
 vim.cmd [[
-    colorscheme terafox
+    colorscheme nord
+    set t_Co=256
 ]]
-
+vim.g.nord_bold_vertical_split_line = 1

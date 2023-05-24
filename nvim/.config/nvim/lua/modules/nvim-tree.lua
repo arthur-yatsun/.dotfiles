@@ -14,9 +14,9 @@ nvim_tree.setup {
     hijack_cursor = false,
 
     auto_reload_on_write = true,
-    open_on_setup = true,
-    open_on_setup_file = true,
-    open_on_tab = true,
+    open_on_setup = false,
+    open_on_setup_file = false,
+    open_on_tab = false,
 
     -- list of filetypes that will prevent open_on_setup
     ignore_ft_on_setup = {"startify", "dashboard", "alpha"},
