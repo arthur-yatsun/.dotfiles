@@ -1,0 +1,11 @@
+{
+  "app:open-vault": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ]
+}
