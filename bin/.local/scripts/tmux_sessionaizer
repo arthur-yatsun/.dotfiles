@@ -3,9 +3,10 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find $TMUX_SESSION_DIRS -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/ancestry -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
+echo $selected
 if [[ -z $selected ]]; then
     exit 0
 fi
