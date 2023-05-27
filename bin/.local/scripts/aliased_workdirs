@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+
+import os
+import argparse
+from dataclasses import dataclass
+from os.path import expanduser
+from pathlib import Path
+
+home_dir = expanduser("~")
+ALIASED_WORKIDIRS_PATH = f"{home_dir}/.config/aliased_workdirs"
+ALIASED_WORKDIRS_RESOLVER = f"{home_dir}/.config/aliased_workdirs_resolver"
+
+
+@dataclass
+class AliasedWorkdir:
+    name: str
+    relative_path: str
+    full_path: str
+
+    def get_workdir(self):
+        return f"{self.name} - {self.relative_path}\n"
+
+    def get_workdir_resolver(self):
+        return f"{self.name}\t{self.full_path}\n"
+
+
+def get_aliased_workdirs(file_name: str):
+    with open(file_name) as file:
+        content = file.read().strip()
+    lines = content.split("\n")
+
+    ALIAS_DEFINITION = 1
+    aliases = [line.split(" ")[ALIAS_DEFINITION] for line in lines]
+
+    aliased_workdirs: list[AliasedWorkdir] = []
+    for alias in aliases:
+        name, path = alias.split("=")
+
+        path = Path(path)
+        # parent/name
+        relative_path = path.relative_to(path.parent.parent)
+
+        workdir = AliasedWorkdir(name=name, relative_path=str(relative_path), full_path=str(path))
+        aliased_workdirs.append(workdir)
+
+    with open(ALIASED_WORKIDIRS_PATH, "a") as file_awp, open(ALIASED_WORKDIRS_RESOLVER, "a") as file_awr:
+        for workdir in aliased_workdirs:
+            file_awp.write(workdir.get_workdir())
+            file_awr.write(workdir.get_workdir_resolver())
+
+
+if __name__ == '__main__':
+    try:
+        os.remove(ALIASED_WORKIDIRS_PATH)
+        os.remove(ALIASED_WORKDIRS_RESOLVER)
+    except FileNotFoundError:
+        pass
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file_name")
+    args = parser.parse_args()
+
+    get_aliased_workdirs(args.file_name)

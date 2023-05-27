@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+path=$1
+dirnames=$(find $WORK_DIR $REPOS -mindepth 2 -maxdepth 2 -type f -name ".alias" -exec dirname {} \;)
+
+
+aliases=""
+for dir in $dirnames; do
+  alias_name=$(cat $dir/.alias)
+
+  alias="alias $alias_name=$dir"
+  aliases="$aliases\n$alias"
+done
+
+printf "$aliases" > $path

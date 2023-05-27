@@ -3,24 +3,26 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find $WORK_DIR $REPOS -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(cat ~/.config/aliased_workdirs | fzf)
 fi
 
-echo $selected
 if [[ -z $selected ]]; then
     exit 0
 fi
+
+workdir_alias=$(echo $selected | awk '{print $1}')
+selected_path=$(cat ~/.config/aliased_workdirs_resolver | grep $workdir_alias | awk '{print $2}')
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s $selected_name -c $selected_path
     exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+    tmux new-session -ds $selected_name -c $selected_path
 fi
 
 tmux switch-client -t $selected_name
