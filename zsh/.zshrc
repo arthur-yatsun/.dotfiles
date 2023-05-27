@@ -11,7 +11,7 @@ source ~/.config/env_variables.bash
 source ~/.config/aliases.bash
 resolve_aliases ~/.config/local_aliases.sh
 aliased_workdirs ~/.config/local_aliases.sh
-source ~/.config/local_aliases.bash
+source ~/.config/local_aliases.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
