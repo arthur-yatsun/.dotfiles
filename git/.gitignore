@@ -1,6 +1,9 @@
 # dev folder for each project
 /dev/
 
+# file with alias name for the current folder
+.alias
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

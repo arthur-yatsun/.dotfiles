@@ -17,7 +17,7 @@
 	pager = less -F
 
 	# set global gitignore file
-	excludesFile = ~/.gitignore
+	excludesfile = /Users/ayatsun.appwell/.gitignore
 
 
 # set default branch to main during `git init`
