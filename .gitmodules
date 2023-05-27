@@ -3,7 +3,7 @@
 	url = git@github.com:arthur-yatsun/.personal.git
 	ignore = untracked
 [submodule ".scripts_references"]
-	path = .scripts_references
+	path = .config_files
 	url = git@github.com:arthur-yatsun/.scripts_references.git
 [submodule ".ansible"]
 	path = .ansible
