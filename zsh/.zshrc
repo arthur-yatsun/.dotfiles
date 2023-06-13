@@ -9,8 +9,11 @@ fi
 source ~/.config/env_variables.bash
 # export aliases
 source ~/.config/aliases.bash
+
+# recursively goes through the .alias files in each project and stores them in local_aliases.sh
 resolve_aliases ~/.config/local_aliases.sh
 aliased_workdirs ~/.config/local_aliases.sh
+
 source ~/.config/local_aliases.sh
 
 # Path to your oh-my-zsh installation.

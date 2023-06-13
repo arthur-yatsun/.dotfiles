@@ -11,7 +11,7 @@ if [[ -z $selected ]]; then
 fi
 
 workdir_alias=$(echo $selected | awk '{print $1}')
-selected_path=$(cat ~/.config/aliased_workdirs_resolver | grep $workdir_alias | awk '{print $2}')
+selected_path=$(cat ~/.config/aliased_workdirs_resolver | awk -v alias=$workdir_alias '{if($1 == alias){ print $2}}')
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
