@@ -12,6 +12,13 @@
     sts   = "stash save"
     sta   = "stash apply" # stash^{/my_stash_name} or stash@{n}
 
+    clb   = "clone --bare"
+
+    wa   = "worktree add" # git wa <branch> <path> [<commit-ish>]
+    wab   = "worktree add -b" # git wab <branch> <path> [<commit-ish>]
+    wl    = "worktree list"
+    wrm   = "worktree remove"
+
 [core]
 	# use less pager if git output is more than a screen size (> ~500 lines)
 	pager = less -F
