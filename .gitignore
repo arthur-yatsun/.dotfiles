@@ -1,2 +1,4 @@
 /* ignore auto generated nvim plugin folder */
 plugin/
+
+hosts.yml
