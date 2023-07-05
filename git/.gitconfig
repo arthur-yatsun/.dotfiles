@@ -5,7 +5,7 @@
 	cb    = "checkout -b"
 	br    = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 	cbr   = "branch --show-current"
-	lg    = "log --graph --decorate --pretty=oneline --abbrev-commit"
+	lg    = "log --graph --decorate --pretty=format:'%h - %an: %s' --abbrev-commit"
 	slg   = "log --graph --decorate --pretty=oneline --abbrev-commit -5"
     rlg   = "reflog --decorate --pretty=oneline --abbrev-commit"
 
