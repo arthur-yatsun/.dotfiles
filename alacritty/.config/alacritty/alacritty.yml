@@ -88,6 +88,15 @@ colors:
    text: '#ffffff' 
    background: '#8601af'
 
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hints:
+    launcher:
+      program: open
+      # linux - xdg-open
+
+
 
 key_bindings:
   - { key: V, mods: Control, action: Paste}
