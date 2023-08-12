@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # change ctrl-p behaviour
 bindkey "^P" up-line-or-search
-bindkey "^K" beginning-of-line
+# bindkey "^K" beginning-of-line
 
 # enable glob operator
 setopt extendedglob
@@ -155,3 +155,9 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # To customize prompt, run `p10k configure` or edit ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh.
 [[ ! -f ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh ]] || source ~/Documents/repos/.dotfiles/p10k.zsh/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ayatsun.appwell/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ayatsun.appwell/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ayatsun.appwell/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ayatsun.appwell/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
