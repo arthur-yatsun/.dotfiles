@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # change ctrl-p behaviour
 bindkey "^P" up-line-or-search
-# bindkey "^K" beginning-of-line
+bindkey "^K" beginning-of-line
 
 # enable glob operator
 setopt extendedglob
