@@ -7,6 +7,7 @@
 	cbr   = "branch --show-current"
 	lg    = "log --graph --decorate --pretty=format:'%h - %an: %s' --abbrev-commit"
 	slg   = "log --graph --decorate --pretty=oneline --abbrev-commit -5"
+
     rlg   = "reflog --decorate --pretty=oneline --abbrev-commit"
 
     sts   = "stash save"
@@ -14,10 +15,12 @@
 
     clb   = "clone --bare"
 
-    wa   = "worktree add" # git wa <branch> <path> [<commit-ish>]
+    wa    = "worktree add" # git wa <branch> <path> [<commit-ish>]
     wab   = "worktree add -b" # git wab <branch> <path> [<commit-ish>]
     wl    = "worktree list"
     wrm   = "worktree remove"
+
+    puhs  = "push"
 
 [core]
 	# use less pager if git output is more than a screen size (> ~500 lines)
