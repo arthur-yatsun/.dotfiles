@@ -1,0 +1,108 @@
+[colors.bright]
+black = "0x5b5858"
+blue = "0x3fc4de"
+cyan = "0x6be4e6"
+green = "0x3fdaa4"
+magenta = "0xf075b5"
+red = "0xec6a88"
+white = "0xd5d8da"
+yellow = "0xfbc3a7"
+
+[colors.cursor]
+cursor = "#7980ff"
+text = "#00f900"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.normal]
+black = "0x16161c"
+blue = "0x26bbd9"
+cyan = "0x59e1e3"
+green = "0x29d398"
+magenta = "0xee64ac"
+red = "0xe95678"
+white = "0xd5d8da"
+yellow = "0xfab795"
+
+[colors.primary]
+background = "0x1c1e26"
+foreground = "0xe0e0e0"
+
+[colors.search.focused_match]
+background = "#c5c8c6"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[colors.selection]
+background = "#8601af"
+text = "#ffffff"
+
+[colors.vi_mode_cursor]
+cursor = "#ffffff"
+text = "#7980ff"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Super"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+opacity = 1
