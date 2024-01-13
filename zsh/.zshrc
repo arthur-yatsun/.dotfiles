@@ -5,16 +5,27 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+source_file() {
+    file_name=$1
+    if [ -f $file_name ]; then
+        source $file_name
+    else
+        echo "$file_name file doesn't exist. Please check"
+    fi
+}
+
 # export env variables
-source ~/.config/env_variables.bash
+source_file ~/.config/env_variables.bash
+
 # export aliases
-source ~/.config/aliases.bash
+source_file ~/.config/aliases.bash
 
 # recursively goes through the .alias files in each project and stores them in local_aliases.sh
-resolve_aliases ~/.config/local_aliases.sh
-aliased_workdirs ~/.config/local_aliases.sh
+find_aliases ~/.config/local_aliases.sh $WORKDIR_PATH1
+get_aliased_workdirs ~/.config/local_aliases.sh
 
-source ~/.config/local_aliases.sh
+source_file ~/.config/local_aliases.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
