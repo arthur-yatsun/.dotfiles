@@ -22,7 +22,7 @@ source_file ~/.config/env_variables.bash
 source_file ~/.config/aliases.bash
 
 # recursively goes through the .alias files in each project and stores them in local_aliases.sh
-find_aliases ~/.config/local_aliases.sh $WORKDIR_PATH1
+find_aliases ~/.config/local_aliases.sh $WORKDIR_PATH1 $WORKDIR_PATH2
 get_aliased_workdirs ~/.config/local_aliases.sh
 
 source_file ~/.config/local_aliases.sh
@@ -138,6 +138,19 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ctrl + t; brew install bat
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
 
 # add support for hidden files
 export FZF_DEFAULT_COMMAND='find .'
