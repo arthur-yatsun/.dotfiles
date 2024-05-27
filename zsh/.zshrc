@@ -142,6 +142,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # ctrl + t; brew install bat
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
+  --walker-skip .git,__pycache__
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 
