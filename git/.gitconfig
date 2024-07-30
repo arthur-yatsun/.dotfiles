@@ -15,6 +15,9 @@
 
     clb   = "clone --bare"
 
+    wd    = "diff --word-diff"
+    bl3   = "blame -w -C3"
+
     wa    = "worktree add" # git wa <branch> <path> [<commit-ish>]
     wab   = "worktree add -b" # git wab <branch> <path> [<commit-ish>]
     wl    = "worktree list"
@@ -28,6 +31,7 @@
 
 	# set global gitignore file
 	excludesfile = ~/.gitignore
+	autocrlf = false
 
 
 # set default branch to main during `git init`
