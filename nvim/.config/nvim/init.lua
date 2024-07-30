@@ -1,37 +1,24 @@
 -- general
-require "modules.options"
-require "modules.plugins"
-require "modules.keymaps"
-require "modules.autocommands"
-require "modules.impatient"
+require("general.options")
+require("general.keymaps")
 
--- auto completions
-require "modules.cmp"
-require "modules.lsp"
+-- plugins
+require("plugins.lazy")
 
--- appearance
-require "modules.nvim-tree"
-require "modules.colorscheme"
-require "modules.lualine"
-require "modules.bufferline"
-require "modules.treesitter"
-require "modules.context"
-require "modules.alpha"
-require "modules.indentline"
+-- lsp
+require("lsp.config")
+require("lsp.mason")
+require("lsp.cmp")
 
--- editor features
-require "modules.autopairs"
-require "modules.comment"
-require "modules.gitsigns"
-require "modules.marks"
-require "modules.symbols_outline"
-require "modules.telescope"
-require "modules.harpoon"
+-- syntax
+require("syntax.formatters")
+require("syntax.treesitter")
+require("syntax.autopairs")
+require("syntax.comment")
+-- require("syntax.gitsigns")
 
--- connects automatically to the active python venv
-require "modules.py_env"
+-- navigation
+require("navigation.telescope")
+require("navigation.harpoon")
 
--- workaround to set colorcolumn
-vim.cmd "set colorcolumn=120"
-
-require("lspconfig").pyright.setup{}
+vim.cmd("colorscheme retrobox")
