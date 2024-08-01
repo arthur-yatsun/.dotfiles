@@ -15,7 +15,7 @@ require("syntax.formatters")
 require("syntax.treesitter")
 require("syntax.autopairs")
 require("syntax.comment")
--- require("syntax.gitsigns")
+require("syntax.gitsigns")
 
 -- navigation
 require("navigation.telescope")
