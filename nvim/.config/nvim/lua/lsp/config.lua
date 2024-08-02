@@ -27,8 +27,12 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>g", function()
 		vim.lsp.buf.references()
 	end, opts)
-end)
 
+    vim.keymap.set("n", "<leader>;", function()
+        vim.diagnostic.open_float()
+    end, opts)
+
+end)
 lsp.setup()
 
 --

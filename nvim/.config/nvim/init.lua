@@ -21,4 +21,4 @@ require("syntax.gitsigns")
 require("navigation.telescope")
 require("navigation.harpoon")
 
-vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme rose-pine-main")
